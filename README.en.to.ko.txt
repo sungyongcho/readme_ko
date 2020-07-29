@@ -1,33 +1,33 @@
 # 서론
 
-The exam system gives you assignments one by one, and will grade you on-demand when you ask it to.
+이 시험 시스템은 하나하나씩 과제가 주어 지고, 당신이 요청 할 때 채점이 진행됩니다.
 
-An exam is a set of levels, and each level has its pool of possible assignments that are given at random. Your neighbor probably won't have the same as you. Life is unfair, deal with it.
+하나의 시험은 레벨들의 세트로 주어지고, 각 레벨은 가능 한 과제의 모음들 중에서 한가지의 과제가 무작위로 주어질 것입니다. 아마 당신의 동료가 당신과 동일한 과제가 주어지지 않을 것입니다. 삶은 불공평 하니, 받아들이세요.
 
-For each level you validate, you'll get points, up to a maximum of 100.
+각 레벨을 통과 하게되면, 당신은 점수를 받게 되고, 총점은 100점이 됩니다.
 
-## Before the exam
+## 시험 이전
 
-Before doing an exam, you will have to subscribe to (or retry, if it isn't the first time) at least one exam project on the Intranet. You can subscribe to as many as you like, there are no restrictions about this.
+시험을 치르기 전에, 당신은 인트라넷에서 적어도 한 시험 프로젝트에 시험에 구독(subscribe)된 상타여야 합니다. 당신이 원하는 만큼 시험에 구독 할 수있고, 여기에는 제한이 없습니다.
 
-Once you're subscribed to at least one exam project, you will be able to access it using `examshell`, but only in practice mod54.
+당신이 시험에 적어도 하나 이상의 시험 프로젝트에 구독 되어있다면, 당신은 'examshell' 을 통하여 시험에 접근 할 수 있지만, '연습 모드' 로만 접근이 가능합니다.
 
-If you want to do it for real, you also have to subscribe to an exam session, be at the session ON TIME, and login as "exam" in the exam room. Only then will you be able to do the exam in real mode.
+당신이 실제로 시험에 접속 하고 싶다면, exam session에도 구독이 되어 있어야 합니다. 시험시간을 꼭 지키고, 시험장에 "exam"으로 로그인 합니다. 이렇게 하여야만 당신은 실제 모드로 시험을 볼 수 있습니다.
 
-## Exam modes
+## 시험 모드
 
-There are two exam modes :
+두 가지의 시험 모드가 있습니다.There are two exam modes :
 
-* Practice mode, that you can access from your own session, from anywhere, anytime. In practice mode, everything works normally except your grade will not be taken into account on the Intranet. You can practice an exam as often as you like.
-* Real mode, that you can only access from the "exam" session, in an exam room, during an exam event. In this mode, your grade WILL be counted on the Intranet, and if you end your session your grade will become definitive.
+* 연습 모드는, 당신이 원하는 시간에 언제 어디서든간에 세션에 접속 할 수 있습니다. 연습 모드는 모든것이 보통처럼 작동하지만, 인트라넷에 성적이 등록 되진 않습니다. 시험은 언제든지 원하는 만큼 연습 해 볼 수 있습니다.
+* 실제 모드는, "exam" 세션에만 접속 할 수 있는 모드로써, 시험장에서, 시험 이벤트가 있을 때만 접속 가능합니다. 이 모드에서는, 당신의 시험 점수가 인트라넷에 등록되고, 당신이 시험 세션을 종료 하면 시험 점수가 결정되게 됩니다.
 
 ## Examshell
 
-You will interface with the exam system using a program called `examshell`.
+당신은 'examshell'이라는 프로그램을 통해 시험 시스템과 마주하게 됩니다.
 
-You have to start it yourself in its own terminal, at the latest 10 minutes after the exam start date. If you stop it inadvertently, it's not a problem, you can just start it again by typing `examshell` in a terminal. It will just resume the process to where it was before.
+당신은 시험 시작 후 10분 안에 시험이 시작된 이후에 각자의 터미널위에서 시험을 시작 해야만 합니다. 만약 당신이 실수로 그만두었다면, 문제 될게 없고, 터미널 위에 'examshell'을 입력 하여 시험을 재개 하면 됩니다. 이렇게 하면 이전부터 과정이 다시 시작됩니다.
 
-# Short version
+# 짧은 버전 (기존 번역본 활용 하면 될것 같습니다)
 
 1. You start examshell
 2. Examshell tells you the different exams you have access to
@@ -44,13 +44,13 @@ You have to start it yourself in its own terminal, at the latest 10 minutes afte
 13. If you succeeded, you will gain points and go up one level. If there are levels left in the exam, goto 5, else the exam is finished
 14. If you failed, you stay at the same level, lose 5 potential points, and goto 5. If there are no more assignments in the current level's pool, the exam is finished.
 
-Don't get it ? Read the long version !
+무슨 말인지 모르겠다구요? 긴 버전을 읽으세요!
 
 # Long version
 
-We'll do an example for this documentation, running in practice mode. When running in real mode, you will work in `~/`, but in practice we work in `~/exam-basedir/`.
+이 문서를 위해서 예시로 연습 모드를 실행 해 보겠습니다. 실제 시험 모드에서는, 당신은 '~/' 에서 시험을 보게 되지만, 연습으로 '~/exam-basedir' 에서 진행하겠습니다.
 
-## Step 1: Starting examshell
+## 1단계: examshell 시작하기
 
 ```
 zaz@blackjack ~ $ examshell
@@ -63,13 +63,13 @@ So, if you do have important things there, Ctrl-C NOW and back them up before ru
 (Press Enter to continue...)
 ```
 
-This warning is absolutely normal. It's just to make sure you don't already have a `~/exam-basedir/` directory with stuff you care about, because examshell will completely empty it. This is so we can have a "clean" exam directory to work in.
+이 경고문은 매우 평범한것입니다. 이는 단지 당신이 '~/exam-basedir/' 위에 무언가 중요한 자료가 남아 있지 않는것을 확인 하는것이고, 왜냐하면 examshell이 완전히 비워버릴 것이기 때문입니다. 이렇게 하면 우리는 "깨끗한" 시험을 볼 경로를 가지게 됩니다.
 
-If this was in real mode, the warning wouldn't be there.
+만약 실제 모드였다면, 경고문은 출력되지 않을것입니다.
 
-## Step 2: Choosing an exam
+## 2단계 : 시험 고르기
 
-When you login, use examshell to choose an exam you want to do, and the level you wish to start at. You can only start at a level you have already validated once for this exam.
+당신이 로그인을 하고, examshell을 통해 어떤 시험을 볼지, 그리고 어떤 레벨에서 시작할지 고르게 됩니다. [미완]
 
 ```
 [...]
@@ -428,24 +428,23 @@ If you are really, really, REALLY, ABSOLUTELY sure you have done it right, and t
 
 No it doesn't, and no you can't have it back.
 
-## I found a bug in the system !
+## 제가 시스템에서 버그를 찾았어요!
 
-Really ?
+진짜로 ?
 
-Well, if you did, please tell us. We won't get mad at you if you don't exploit it.
+음, 당신이 찾았으면, 저희에게 알려주세요. 부정행위를 하지 않으면, 저희는 당신에게 화나지 않을겁니다.
 
-## I found a bug in the system, and I exploited it, you guys will never catch me !
+## 제가 시스템에서 버그를 찾았고, 시험에서 개이득 했는데, 님들은 절대로 절 못잡을거에요!
 
-Yes we will. At some point ! And we hope you'll enjoy looking for another school :)
+네 잡을거에요. 언젠가는! 그리고 우리는 당신이 다른 학교를 찾아 보는것을 즐기는걸 바랄게요 :)
 
-Seriously, don't be an idiot, just report it and move on. It's not worth getting fired for a few points on an exam, is it ?
+장난아니고, 멍청하게 굴지 마시고, 그냥 제보 하시고 넘어가세요. 시험 점수 몇점 때문에 짤리는건 별 소득이 없잖아요, 그렇죠?
 
 ## Examshell 이 project 를 선택하는데 제가 너무 오래 기다렸다고 하는데, 어쩌죠?
 
-잘못된거 하나도 없으니까, 다시 시도하세요. 이건 에러가 아니라
-Nothing's wrong, just try again. It really isn't an error, it's just examshell's clumsy way of telling you you're too indecisive.
+잘못된거 하나도 없으니까, 다시 시도하세요. 이건 에러가 아니라, 당신이 너무 결정장애가 있다고 하는 examshell의 모냥 빠지는 방법으로 알리는 것입니다.. (번역이 참 어렵네요..)
 
-## 시험 채점 요청을 보냈는데 시간이 오래 걸려요I've made a grading request but it takes a long time
+## 시험 채점 요청을 보냈는데 시간이 오래 걸려요.
 
 음, 그게 어떤 시점에서 끝나기는 하나요? 오래 기다려도, 한 1~2분 정도 후에, 끝나지 않으면, 스태프 멤버에가 가세요. 왜냐하면 이건 보통 흔한건 아닌데, 저희는 쉽게 고칠수 있어요.
 
