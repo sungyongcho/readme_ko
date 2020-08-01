@@ -94,9 +94,9 @@ Be aware that if you select a level higher than 0, you will only gain however ma
 Desired start level (0-4):
 ```
 
-If there's more than one available exam, you will choose one, of course.
+만약 여기서 하나 이상의 시험이 있다면, 당연히 당신은 하나만 고를겁니다.
 
-For this example, we will start at level 0. If it doesn't ask you which level you want to start at, don't panic, it's just that you can't start at another level than 0 for the exam you chose.
+이 예시에서는, 우리는 레벨 0에서 시작할게요. 만약 이 시험이 어떤 레벨에서 시작할지 물어보지 않는다면, 당황하지 마시고, 그뜻은 당신이 선택한 시험이 레벨 0 말고 다른 레벨에서 시험을 시작 할 수 없다는 이야기입니다.
 
 ```
 [...]
@@ -107,14 +107,13 @@ You would have 4 hours, 0 minutes and 0 seconds to complete this project
 Confirm ? [y/n]
 ```
 
-If for any reason you're not sure that's what you want to do, just type `n` and you will be able to choose again.
+만약에 당신이 어떤 이유로든 지금 뭘 하는건지 확신이 안들면, 'n'을 입력하면 다시 선택할 수 있습니다.
 
-Note that if you have to restart examshell for any reason after you have selected the project, it will of course not ask you to choose again. It will go straight to step 3.
-
+만약 당신이 어떤 이유로든 프로젝트를 선택한 이후로 examshell을 재새작 해야된다면, 당연히 다시 선택하라고 물어보지 않을겁니다. 바로 step 3로 넘어가게 됩니다.
 
 ## Step 3: Preparing the work directory
 
-After you confirm, examshell will prepare the working directory (`~/exam-basedir/` in practice mode, `~/` in real mode), clone the appropriate Git repository, etc...
+확인 이후에, examshell은 working directory를 준비 하고 (연습모드는 `~/exam-basedir/`, 실제 모드는 `~/`), 적당한 Git repository를 선택하고, 등등... 을 할겁니다.
 
 ```
 [...]
@@ -364,16 +363,16 @@ Your session has been marked as finished. You may now log out.
 zaz@blackjack ~ $
 ```
 
-# FAQ / Common errors
+# FAQ / 일반적인 오류들
 
-## I stopped examshell, what do I do ?
+## 저 examshell을 멈춰버렸어요, 어떻게 하나요?
 
-Just start it again, it's no big deal.
+그냥 다시 사작하세요, 별일 아닙니다.
 
-## Examshell tells me the "login window expired", what gives ?
+## Examshell 이 "login window expired" 라고 하는데, 뭘 해야되나요 ?
 
-You have 10 minutes to choose an exam after the exam start date, afterwards you will get this error because it's simply too late.
-No, you can not do anything about it.
+당신은 시험 이 시작된 후 10분 안에 시험을 골라야하고, 이후로는 이 에러가 나올텐데 간단히 말해서 너무 늦었다는 말입니다.
+안되요, 아무것도 할 수가 없어요.
 
 ## Examshell tells me "Mismatched versions", what gives ?
 
@@ -400,9 +399,9 @@ Examshell tells you exactly why. Here are the possible reasons:
 * "Must login as 'exam' to run in real mode"
 	* Pretty self-explanatory, isn't it ? Just login as "exam" with password "exam".
 
-## I didn't have the same assignments as my neighbor, it's unfair !
+## 전 제 동료와 똑같은 과제를 받지 못했나요, 너무 불공평해요!
 
-Yes. Too bad. Deal with it.
+네. 안됐네요. 받아들이세요.
 
 ## Can I access my repository after the exam ? What about the subjects ?
 
@@ -410,23 +409,23 @@ Normally, you'll get an email with all of this after the exam is marked as finis
 
 If you didn't ... well, wait. If you really don't receive it, too bad, life is unfair I guess.
 
-## Examshell told me I failed, but I'm sure I didn't !
+## Examshell 이 저 실패 했다고 하는데, 전 맹세하는데 진짜로 아니에요!
 
-Most likely, you just forgot something :
+대부분, 당신은 이런 걸 까먹었을 겁니다 :
 
-* Did you push ?
-* Really ?
-* Did you use the right directory ?
-* Are all your files named correctly ?
-* Did you even do the right assignment ?
-* Did you REALLY push ?
-* Etc...
+* push 하셨나요?
+* 진짜로 ?
+* 올바른 directory를 사용 했나요? Did you use the right directory ?
+* 당신의 파일 이름 전부다 정확 한가요 ?
+* 당신 진짜로 맞는 과제를 한게 맞죠 ?
+* 당신 찐으로 push 했나요 ?
+* 기타등등 ...
 
 If you are really, really, REALLY, ABSOLUTELY sure you have done it right, and that the system fucked you, well, just come tell the staff AFTER THE EXAM. We will look at it, but please, please, please think before you come see us : It really is most likely it's your fault, and it takes us a long time to try to look for an error in the assignment itself.
 
-## Your system sucks, I want the old one !
+## 니네 시스템 썩었고, 전 예전 시스템을 원해요!
 
-No it doesn't, and no you can't have it back.
+아뇨 안그렇구요, 그리고 안되요 예전걸로 다시 못돌아가요.
 
 ## 제가 시스템에서 버그를 찾았어요!
 
