@@ -46,11 +46,11 @@
 
 무슨 말인지 모르겠다구요? 긴 버전을 읽으세요!
 
-# Long version
+# 긴 버전
 
 이 문서를 위해서 예시로 연습 모드를 실행 해 보겠습니다. 실제 시험 모드에서는, 당신은 '~/' 에서 시험을 보게 되지만, 연습으로 '~/exam-basedir' 에서 진행하겠습니다.
 
-## 1단계: examshell 시작하기
+## 1단계 : examshell 시작하기
 
 ```
 zaz@blackjack ~ $ examshell
@@ -111,9 +111,9 @@ Confirm ? [y/n]
 
 만약 당신이 어떤 이유로든 프로젝트를 선택한 이후로 examshell을 재새작 해야된다면, 당연히 다시 선택하라고 물어보지 않을겁니다. 바로 step 3로 넘어가게 됩니다.
 
-## Step 3: Preparing the work directory
+## 3단계 : 작업용 디렉토리 준비하기
 
-확인 이후에, examshell은 working directory를 준비 하고 (연습모드는 `~/exam-basedir/`, 실제 모드는 `~/`), 적당한 Git repository를 선택하고, 등등... 을 할겁니다.
+확인 이후에, examshell은 작업용 디렉토리를 준비 하고 (연습모드는 `~/exam-basedir/`, 실제 모드는 `~/`), 적당한 Git repository를 선택하고, 등등... 을 할겁니다.
 
 ```
 [...]
@@ -150,11 +150,11 @@ then they will be counted whatever happens.
 (Press Enter to continue...)
 ```
 
-## Step 4: Getting an assignment
+## 3단계 : 문제 받아오기
 
-Examshell will now fetch your current assignment from the system.
+Examshell 은 이제 현재 당신이 풀 과제를 시스템에서 가져올겁니다.
 
-It will automatically save the subject in the `subjects` directory. You can read it in a terminal.
+자동으로 문제를 'subjects' 디렉토리에 저장 할것입니다. 터미널에서 읽읅 수 있습니다.
 
 ```
 [...]
@@ -181,11 +181,11 @@ push it to vogsphere, and then use the "grademe" command to be graded.
 examshell>
 ```
 
-This display is always accessible using the `status` command.
+이 화면은 'status' 명령어를 사용하여 언제든 접근이 가능합니다.
 
 ## Step 5: Work on your assignment
 
-Now, well, you do the work you are assigned.
+자 이제, 당신은 지정 받은 문제를 풀면 됩니다.
 
 Note that you HAVE to turn it in in the directory examshell told you, which is a subdirectory of the Git repository with the same name as the assignment. No typos, no anything. If you use the wrong directory, you will fail the assignment, with no option to go back. That'd be bad.
 
@@ -348,11 +348,12 @@ and usually transient, so they'd resolve with a retry. If a retry does not solve
 If all else fails, then you can abort. This would give you another assignment of the same level, but without losing potential
 points.
 
-## Step 7: Let's go again
+## 7단계 : 다시 해봅시다
 
+이게 전부입니다.
 That's basically it. You will continue getting new assignments until either you fail enough assignments to exhaust a level's pool of assignments, or you succeed at the last level of the exam.
 
-If you want, you can end your session at any time by using the `finish` command.
+원하신다면, 'finish' 명령어를 사용하여 당신의 세션을 언제든지 종료할 수 있습니다.
 
 ```
 examshell> finish
