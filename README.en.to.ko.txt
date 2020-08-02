@@ -69,7 +69,7 @@ So, if you do have important things there, Ctrl-C NOW and back them up before ru
 
 ## 2단계 : 시험 고르기
 
-당신이 로그인을 하고, examshell을 통해 어떤 시험을 볼지, 그리고 어떤 레벨에서 시작할지 고르게 됩니다. [미완]
+당신이 로그인을 하고, examshell을 통해 어떤 시험을 볼지, 그리고 어떤 레벨에서 시작할지 고르게 됩니다. 당신은 이 시험에서 한번 확인된 레벨에서만 시험을 시작 할 수 있습니다. (애매합니다))
 
 ```
 [...]
@@ -183,19 +183,20 @@ examshell>
 
 이 화면은 'status' 명령어를 사용하여 언제든 접근이 가능합니다.
 
-## Step 5: Work on your assignment
+## 5단계 : 문제 풀기
 
 자 이제, 당신은 지정 받은 문제를 풀면 됩니다.
 
-Note that you HAVE to turn it in in the directory examshell told you, which is a subdirectory of the Git repository with the same name as the assignment. No typos, no anything. If you use the wrong directory, you will fail the assignment, with no option to go back. That'd be bad.
+유의 하여야 할 점으로 examshell이 제출 하라고 명시한 디렉토리 안에 꼭 제출 하셔야 합니다. Git 저장소의 서브 디렉토리로써 문제의 이름과 같아야합니다. 오타 없이, 다른 아무것도 없이요. 만약 틀린 경로를 사용하게되면, 당신은 문제를 틀리게 되고, 다시 돌아갈 수 있는 방법이 없습니다. 그럼 안좋겠죠.
 
-In our example, we would put our `max.c` file in `~/exam-basedir/rendu/max/`.
 
-You WILL have to push your work after you're done, as with any regular project, so don't forget !
+이번 예제에서, 우리는`~/exam-basedir/rendu/max/` 경로 내에 `max.c` 파일을 집어 넣겠습니다.
 
-## Step 6: Request to be graded
+당신은 답안 작성 완료 후에 다른 프로젝트들 처럼 push 를 해야하니, 까먹지마세요!
 
-Once you're SURE that your work is done correctly, and that you have pushed it to vogsphere, you can use the `grademe` command to request that your assignment be graded:
+## 6단계 : 채점 요청하기
+
+당신이 문제를 잘 풀었다는것을 확신하고, vogsphere로 push 를 완료 했다면, `grademe` 를 사용하여 당신이 푼 문제의 채점을 요청 할 수 있습니다:
 
 ```
 examshell> grademe
@@ -208,7 +209,7 @@ but with less potential points to earn!
 Are you sure? [y/N]
 ```
 
-So, yeah, let's say we're sure.
+음, 그래요, 확신한다고 해봅시다.
 
 ```
 [...]
@@ -222,9 +223,9 @@ Please be patient, this CAN take several minutes...
 waiting...
 ```
 
-Now we wait for the system to grade us. It actually CAN take some time, but that's expected, so don't panic unless you wait for 1-2 minutes, in which case you should just ask a staff member, it's an easy fix.
+이제 우리는 시스템이 채점하기를 기다립니다. 이 과정에 약간의 시간이 들 수도 있는데, 원래 이런거니까, 1-2분 넘게 기다린게 아니면 침착하시고, 만약 그렇다면 그냥 스태프에게 말씀하세요, 금방 고쳐드릴테니까요.
 
-### Success !
+### 성공 !
 
 ```
 [...]
@@ -236,13 +237,13 @@ Trace saved to ~/exam-basedir/traces/0-0_max.trace
 (Press Enter to continue...)
 ```
 
-In this case, we succeeded. The grading trace is automatically saved for us to read if we want.
+이 상황에서는, 성공했네요. 이 채점 기록은 우리가 만약 원한다면 읽(을수 있)도록 자동으로 저장됩니다.
 
-The next status message will show that:
+다음 상태 메세지는 아래의 것을 보여줄겁니다:
 
-* We earned the points in play for the assignment (16)
-* We have gone up a level (now at 1)
-* We have a new assignment
+* 우리는 과제를 수행 한것에 대한 점수를 얻게 되었다. (16)
+* 우리는 레벨이 상승하게 되었다 (이제 1로)
+* 우리는 새로운 과제를 얻게 되었다.
 
 ```
 [...]
@@ -273,11 +274,11 @@ push it to vogsphere, and then use the "grademe" command to be graded.
 examshell>
 ```
 
-If that had been the last level of the exam, examshell would have said it, and told us the exam was finished.
+아마 저 레벨이 시험의 마지막 레벨이라면, examshell은 당신과 우리에게 시험이 완료되었다고 알릴것입니다.
 
-### Failure :(
+### 실패 :(
 
-Let's fail this one, just to see what it does:
+이번 문제를 실패해서, 어떤 상황이 벌어지는지 확인을 해봅시다:
 
 ```
 [...]
@@ -327,31 +328,29 @@ push it to vogsphere, and then use the "grademe" command to be graded.
 examshell>
 ```
 
-In this case, we failed, so :
+이 상황에서, 우리는 실패를 했기 때문에:
 
-* We do NOT get the points
-* We do NOT go up a level (we stay at 1)
-* We get a new assignment, but with 5 less points to gain !
+* 우리는 점수를 받지 않게 된다
+* 우리의 레벨은 상승하지 않게 된다 (1에 남아 있음)
+* 우리는 새로운 문제를 받게 되지만, 획득 가능 점수가 5점 줄어들어있다 !
 
-If that had been the last possible assignment in this level, examshell would have said it, and told us the exam was finished.
+이 문제가 지금 레벨에서 풀수있는 마지막 문제였다면, examshell은 당신과 우리에게 시험이 종료되었다고 알릴것입니다.
 
-### Error :<
+### 에러 :<
 
-There is the possibility that examshell says the grading resulted in an ERROR. This does not mean you failed, it means that
-the grading system itself has failed.
+아마 examshell 이 채점의 결과가 ERROR라고 알려줄 가능성이 있습니다. 이 뜻은 당신이 문제를 틀렸다는 것이 아니라,
+시스템이 채점에 실패했다는 뜻입니다.
 
-However, don't panic !
+그러나, 침착하세요!
 
-You will have the option to either retry or abort. You SHOULD retry at least once, because errors in the grading system are rare,
-and usually transient, so they'd resolve with a retry. If a retry does not solve the error, get a staff member to help !
+당신은 재시도 하거나 무시 할 옵션이 있을겁니다. 적어도 꼭 한번은 재시도를 해보세요, 이런 에러는 흔한 경우가 아니고,
+보통 일시적인 현상이기 때문에, 재시도를 통해서 문제가 해결 될겁니다. 만약 재시도를 했는데 에러가 해결되지 않는다면, 스태프 멤버를 찾아 도움을 요청하세요 !
 
-If all else fails, then you can abort. This would give you another assignment of the same level, but without losing potential
-points.
+만약 전부 해결이 안되면, 그냥 무시를 선택할 수 있습니다. 이는 당신에게 같은 레벨에서 다른 문제를 줄거고, 읽게되는 점수가 없는 상태일것입니다.
 
 ## 7단계 : 다시 해봅시다
 
-이게 전부입니다.
-That's basically it. You will continue getting new assignments until either you fail enough assignments to exhaust a level's pool of assignments, or you succeed at the last level of the exam.
+이게 전부입니다. 당신은 새로운 질문의 풀의 범위가 다 떨어질 때 까지 새로운 문제들을 받아 시험에 낙제하거나, 시험에서 마지막 레벨에 도달하게 되어 시험을 성공하게 될것입니다.
 
 원하신다면, 'finish' 명령어를 사용하여 당신의 세션을 언제든지 종료할 수 있습니다.
 
@@ -375,40 +374,40 @@ zaz@blackjack ~ $
 당신은 시험 이 시작된 후 10분 안에 시험을 골라야하고, 이후로는 이 에러가 나올텐데 간단히 말해서 너무 늦었다는 말입니다.
 안되요, 아무것도 할 수가 없어요.
 
-## Examshell tells me "Mismatched versions", what gives ?
+## Examshell 이"Mismatched versions" 이라는데, 뭘 해야하나요 ?
 
-The machine you are on is probably just not updated yet. Either switch to another computer, or come to the Bocal and ask us to update it.
+당신이 앉아있는 컴퓨터가 업데이트 되어있지 않았다는 뜻일겁니다. 다른 컴퓨터에 가서 앉거나, Bocal에게 가서 업데이트를 요청하세요.
 
-## Why can't I use real mode // practice mode ?
+## 왜 저는 real mode나// practice mode 를 사용할 수 없는건가요 ?
 
-Examshell tells you exactly why. Here are the possible reasons:
+Examshell 은 당신에게 정확하게 이야기 말할거고, 다음 이유들에서 이기 때문입니다:
 
 * "Can't practice when logged in as 'exam'"
-	* You have to login using your regular session to use practice mode
+	* 당신은 연습 모드를 사용하려면 보통 세션에서 로그인 되어 있어야합니다.
 * "Project doesn't allow it"
-	* This means the exam project in itself forbids using a specific mode. You can't do anything about that.
+	* 이 말은 이 시험 프로젝트가 특정 모드에 막혀있다는 뜻입니다. 당신은 아무것도 할수 없어요.
 * "You must subscribe to an exam event"
-	* As said in the introduction, to do the exam in real mode, you have to be subscribed to an exam session on the intranet. You can do that in your calendar.
+	* 앞전에도 이야기 한것처럼, 실제 모드에서 시험을 보려면, intranet 상에서 시험 세션에 구독 한 상태여야 합니다. Calenar 위에서 가능해요.
 * "You must retry the project on the intranet"
-	* You can not use real mode if you haven't retried the project on the intranet, because the system wouldn't be able to give you a grade for it.
+	* 당신은 intranet 위에서 재시도 하지 않았으면 실제 모드를 이용 할 수 없습니다. 왜냐하면 시스템이 당신에게 점수를 매길 수 없기 때문입니다.
 * "Current event doesn't allow for this exam"
-	* Some exams are restricted to specific sessions. Most notably during a "piscine". You will have to attend a session that's made specifically for this exam
+	* 몇몇 시험들은 특정 세션에 제한되어 있습니다. 대부분이 "piscine"의 경우 입니다. 당신은 이 모드를 실행 할수 있는 시험에 참여 하여야 합니다.
 * "Can't do it from this location"
-	* Most exams are restricted to a specific location so that the exam is done under controlled conditions. You have to login at one of these places ! Practice mode, however, is available from anywhere
+	* 대부분의 시험은 특정 지역에서 제한되어 있기 때문에 통제된 사함에서 시험이 치뤄지게 됩니다. 당신은 특정 장소에 가서 로그인 해야합니다! 연습모드는, 그러나, 어디서든 가능합니다
 * "Too early, well be OK in XXX" // "Too late, ended at XXX"
-	* Means the closest exam session you are subscribed to is not yet started or has already ended.
+	* 이말은 당신이 등록한 시험 세션이 아직 시작 안했다거나, 이미 종료되었다는 소리입니다.
 * "Must login as 'exam' to run in real mode"
-	* Pretty self-explanatory, isn't it ? Just login as "exam" with password "exam".
+	* 말 그대로 설명하고 있는데, 그렇지 않나요? 그냥 "exam"으로, 비밀번호 "exam"으로 로그인하세요.
 
 ## 전 제 동료와 똑같은 과제를 받지 못했나요, 너무 불공평해요!
 
 네. 안됐네요. 받아들이세요.
 
-## Can I access my repository after the exam ? What about the subjects ?
+## 시험 이후에 저장소에 접근이 가능한가요? 과제들은요 ?
 
-Normally, you'll get an email with all of this after the exam is marked as finished.
+보통은 , 시험 종료후에 이 모둔것에 대해 시험이 종료되었다고 표시된 후에 이메일을 받게 될겁니다.
 
-If you didn't ... well, wait. If you really don't receive it, too bad, life is unfair I guess.
+만약 안그랬다면 ... 음, 기다리세요. 만약 진짜로 못받았으면, 안됐네요, 삶이 불공평한거라서.
 
 ## Examshell 이 저 실패 했다고 하는데, 전 맹세하는데 진짜로 아니에요!
 
@@ -422,7 +421,7 @@ If you didn't ... well, wait. If you really don't receive it, too bad, life is u
 * 당신 찐으로 push 했나요 ?
 * 기타등등 ...
 
-If you are really, really, REALLY, ABSOLUTELY sure you have done it right, and that the system fucked you, well, just come tell the staff AFTER THE EXAM. We will look at it, but please, please, please think before you come see us : It really is most likely it's your fault, and it takes us a long time to try to look for an error in the assignment itself.
+만약 당신이 진짜, 진짜, 진심으로, 완전히 문제를 잘 풀었다고 확신하고, 시스템이 너 좆되봐라 한것같으면, 그냥 시험 후에 스태프에게 오세요. 한번 볼텐데, 제발, 제발, 젭알 한번 오기 전에 생각 해보고 오세요: 진짜 대부분은 당신이 잘못한거고,이 시험문제가 잘못 되었다는것을 알아보려면 저희에겐 긴 시간이 걸립니다.
 
 ## 니네 시스템 썩었고, 전 예전 시스템을 원해요!
 
